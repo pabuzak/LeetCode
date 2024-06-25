@@ -1,23 +1,33 @@
-import math
 nums = [1, 2, 3, 4]
 
 products = []
 
+before = [1]
+after = []
+
+product1 = 1
+for n in range(len(nums)):
+    print(product1)
+    product1 *= nums[n]
+    before.append(product1)
+
+product2 = 1
+for n in range(len(nums)-1, -1, -1):
+    product2 *= nums[n]
+    after.append(product2)
+
+after.reverse()
+after.append(1)
 
 for n in range(len(nums)):
-    product1 = 1
-    product2 = 1
-    num = nums[n+1:]
+    multiply = before[n] * after[n+1]
+    products.append(multiply)
 
-    product1 = math.prod(num)
-
-    num = nums[:n]
-    product2 = math.prod(num)
-
-    products.append(product1 * product2)
-    
-
+print(before)
+print(after)
 print(products)
+
+# print(products)
 
 
 ### o(n^2)
