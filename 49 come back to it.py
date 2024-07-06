@@ -9,7 +9,6 @@ for n in range(len(strs)):
             if sorted(strs[n]) == sorted(strs[i]):
                 anagram.add(strs[n])
                 anagram.add(strs[i])
-
     
     if anagram:
         if anagram not in group_anagram:
