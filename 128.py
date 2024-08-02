@@ -1,12 +1,9 @@
-nums = [100,4,200,1,3,2]
+nums=[0,-1]
+
 
 result = 0
-arr = []
-temp = 0
-
-for n in nums:
-    temp = n
-    
+seq = set(nums)
+num = 0
 
 
 print(result)
