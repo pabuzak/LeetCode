@@ -10,6 +10,7 @@ for n in seq:
         num = n
         for n in seq:
             if num+1 in seq:
+                num = num+1
                 count += 1
             else:
                 break
